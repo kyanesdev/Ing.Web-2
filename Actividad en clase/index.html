@@ -4,74 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programacion Basica</title>
+    <title>Actividades en Clase</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="color:DodgerBlue;">Bienvenido a la materia Ingenieria Web 2</h1>
-    <h2 style="color:aqua">Bienvenido a la materia Ingenieria Web 2</h2>
-    <h3 style="color:red">Bienvenido a la materia Ingenieria Web 2</h3>
-    <h4 style="color:yellow">Bienvenido a la materia Ingenieria Web 2</h4>
-    <h5 style="color:grey">Bienvenido a la materia Ingenieria Web 2</h5>
-    <h6 style="color:#80ff">Bienvenido a la materia Ingenieria Web 2</h6>
+    <div class="containerTodo">
+        <h1 style="color:DodgerBlue;">Bienvenido a la materia Ingenieria Web 2</h1>
+        <h2 style="color:aqua">Bienvenido a la materia Ingenieria Web 2</h2>
+        <h3 style="color:red">Bienvenido a la materia Ingenieria Web 2</h3>
+        <h4 style="color:yellow">Bienvenido a la materia Ingenieria Web 2</h4>
+        <h5 style="color:grey">Bienvenido a la materia Ingenieria Web 2</h5>
+        <h6 style="color:#80ff">Bienvenido a la materia Ingenieria Web 2</h6>
+       
+        <ul class="tablas">
+            <li>ABM de Productos</li>
+            <li>Control de Stock</li>
+            <li>Control de Proveedores</li>
+            <li>Facturacion de productos</li>
+            <li>ABM de clientes</li>
+        </ul>
+    
+        <ol class="tablas">
+            <li>ABM de Productos</li>
+            <li>Control de Stock</li>
+            <li>Control de Proveedores</li>
+            <li>Facturacion de productos</li>
+            <li>ABM de clientes</li>
+        </ol>
+    
+        <div>
+            <h1>Mis imagenes</h1>
+            <a href="palta.html"><img src="./palta.jpg" alt=""></a>
+        </div>
+    
+    
+        <div>
+            <h1>Capitales del Mundo</h1>
+        </div>
+    
+        <table class="tablas">
+            <tr>
+                <td><strong>Continente</strong></td>
+                <td><strong>Nombre del pais</strong></td>
+                <td><strong>Capital del mismo</strong></td>
+            </tr>
+    
+            <tr>
+                <td>America-del-Sur</td>
+                <td>Argentina</td>
+                <td>Buenos Aires</td>
+            </tr>
+    
+            <tr>
+                <td>America-del-Norte</td>
+                <td>Canada</td>
+                <td>Ottawa</td>
+            </tr>
+        </table>
+    </div>
    
-    <ul>
-        <li>ABM de Productos</li>
-        <li>Control de Stock</li>
-        <li>Control de Proveedores</li>
-        <li>Facturacion de productos</li>
-        <li>ABM de clientes</li>
-    </ul>
 
-    <ol>
-        <li>ABM de Productos</li>
-        <li>Control de Stock</li>
-        <li>Control de Proveedores</li>
-        <li>Facturacion de productos</li>
-        <li>ABM de clientes</li>
-    </ol>
-
-    <div>
-        <h1>Mis imagenes</h1>
-        <a href="palta.html"><img src="./palta.jpg" alt=""></a>
-    </div>
-
-
-    <div>
-        <h1>Capitales del Mundo</h1>
-    </div>
-
-    <table>
-        <tr>
-            <td><strong>Continente</strong></td>
-            <td><strong>Nombre del pais</strong></td>
-            <td><strong>Capital del mismo</strong></td>
-        </tr>
-
-        <tr>
-            <td>America-del-Sur</td>
-            <td>Argentina</td>
-            <td>Buenos Aires</td>
-        </tr>
-
-        <tr>
-            <td>America-del-Norte</td>
-            <td>Canada</td>
-            <td>Ottawa</td>
-        </tr>
-    </table>
-
-    <form action="">
+    <form method="GET" action="" class="formContainer">
         <p>Nombre</p>
-        <input type="text" name="" id="">
+        <input type="text" name="nombre" id="nombreid">
         <p>Apellido</p>
-        <input type="text" name="" id="">
+        <input type="text" name="apellido" id="apellidoid">
         <p>Direccion</p>
-        <input type="text" name="" id="">
+        <input type="text" name="direccion" id="direccionid">
         <p>Telefono</p>
-        <input type="input" name="" id="">
+        <input type="input" name="telefono" id="telefonoid">
         <p>Genero</p>
-        <i>M</i><input type="checkbox" name="" id="">
-        <i>F</i><input type="checkbox" name="" id="">
+        <input type="radio" id="masculinoid" name="genero" value="Masculino">
+        <label for="masculino">Masculino</label><br>
+
+        <input type="radio" id="femeninoid" name="genero" value="Femenino">
+        <label for="femenino">Femenino</label><br>
+
+        <input type="radio" id="otrosid" name="genero" value="Otros">
+        <label for="otros">Otros</label><br>
+
+        
+        <input type="submit" name="enviar" id="enviarid" value="Enviar" class="botonEnviar">
     </form>
 
 
