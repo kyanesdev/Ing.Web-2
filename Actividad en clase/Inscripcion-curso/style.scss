@@ -1,0 +1,12 @@
+.container-rellenado{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 200px;
+}
+
+.container-checkbox{
+    display: flex;
+    flex-direction: column;
+}
