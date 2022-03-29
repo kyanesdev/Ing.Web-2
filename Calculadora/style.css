@@ -1,0 +1,36 @@
+body {
+  background-image: url("https://i.stack.imgur.com/jGlzr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.titulo {
+  color: #fff;
+  text-align: center;
+  font-size: 45px;
+}
+
+.calculadora-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 150px);
+}
+
+.calculadora-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px, solid #FFFFFF;
+  outline: none;
+}
+
+.calculadora-grid > button:hover {
+  background-color: #a9a9a9;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&family=Rubik&display=swap" rel="stylesheet">
+    <title>Calcu-kyanesdev</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Calculadora</h1>
+    </header>
+
+    <div class="calculadora-grid">
+        <div class="resultado">
+            <input class="visor" id="visor" type="text" value="0" readonly>
+        </div>
+        <button class="span">AC</button>
+        <button >DEL</button>
+        <button onclick="dividir()">÷</button>
+        <button onclick="mostrar(1)">1</button>
+        <button onclick="mostrar(2)">2</button>
+        <button onclick="mostrar(3)">3</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="mostrar(4)">4</button>
+        <button onclick="mostrar(5)">5</button>
+        <button onclick="mostrar(6)">6</button>
+        <button onclick="sumar()">+</button>
+        <button onclick="mostrar(7)">7</button>
+        <button onclick="mostrar(8)">8</button>
+        <button onclick="mostrar(9)">9</button>
+        <button onclick="restar()">-</button>
+        <button onclick="decimal()">.</button>
+        <button onclick="mostrar(0)">0</button>
+        <button onclick="resultado()" class="span">=</button>
+    </div>
+    <script src="calculo.js"></script>
+</body>
+</html>
