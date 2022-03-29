@@ -1,0 +1,16 @@
+.tablero {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+  font-size: 1.5rem;
+  width: 40vw;
+}
+
+.boton {
+  font-size: 4rem;
+  width: 20vw;
+  height: 15vw;
+}
+
+/*# sourceMappingURL=style.css.map */
