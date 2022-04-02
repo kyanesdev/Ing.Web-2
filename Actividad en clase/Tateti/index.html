@@ -5,30 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <title>Jueguito</title>
 </head>
 <body>
+    
     <!--Tabla de TA-TE-TI-->
     <table class="tablero">
+        <div class="titulo-container">
+            <h2 class="titulo">TA TE TI</h2>
+            
+        </div>
+        <div>
+            <p class="jugadores">Jugador 1: X</p>
+            <p class="jugadores">Jugador 2: O</p>
+        </div>
+        
+            
         
             <tr>
-                <td><input type="button" value="-" name="celda" id="a1" onclick="cambiarA1()" class="boton"></td>
-                <td><input type="button" value="-" name="celda" id="a2" onclick="cambiarA2()" class="boton"></td>
-                <td><input type="button" value="-" name="celda" id="a3" onclick="cambiarA3()" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="a1" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="a2" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="a3" class="boton"></td>
             </tr>
     
             <tr>
-                <td><input type="button" value="-" name="celda" id="b1" onclick="cambiarB1()" class="boton"></td>
-                <td><input type="button" value="-" name="celda" id="b2" onclick="cambiarB2()" class="boton"></td>
-                <td><input type="button" value="-" name="celda" id="b3" onclick="cambiarB3()" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="b1" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="b2" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="b3" class="boton"></td>
             </tr>
     
             <tr>
-                <td><input type="button" value="-" name="celda" id="c1" onclick="cambiarC1()" class="boton"></td>
-                <td><input type="button" value="-" name="celda" id="c2" onclick="cambiarC2()" class="boton"></td>
-                <td><input type="button" value="-" name="celda" id="c3" onclick="cambiarC3()" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="c1" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="c2" class="boton"></td>
+                <td><input type="button" value="-" name="celda" id="c3" class="boton"></td>
             </tr>
-    
+        
+            
         
     </table>
     <script src="app.js"></script>
