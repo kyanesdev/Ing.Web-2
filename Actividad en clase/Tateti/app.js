@@ -13,6 +13,7 @@ var c3;
 var jugador1 = true;
 var jugador2 = false;
 
+
 var buttons = document.querySelectorAll('.boton')
 
 a1 = document.getElementById("a1");
@@ -29,7 +30,7 @@ c3 = document.getElementById("c3")
 
 
 function manejadorCallback(evento) {
-
+    
     switch(evento.target.id){
         case a1.id:
             if(a1.value == "-" && jugador1 == true && jugador2 == false){
@@ -144,6 +145,7 @@ function manejadorCallback(evento) {
     }
     
     ganador();
+    
 }
 
 
@@ -154,49 +156,49 @@ for(var i = 0; i < buttons.length; i++) {
 
  function ganador(){
     if(a1.value == "X" && a2.value == "X" && a3.value == "X"){
-        alert("Ganador jugador 1");
+        mensajeGanadorJug1();
     }else{
         if(a1.value == "O" && a2.value == "O" && a3.value == "O"){
-            alert("Ganador jugador 2");
+            mensajeGanadorJug2();
         }else{
             if(b1.value == "X" && b2.value == "X" && b3.value == "X"){
-                alert("Ganador jugador 1");
+                mensajeGanadorJug1();
             }else{
                 if(b1.value == "O" && b2.value == "O" && b3.value == "O"){
-                    alert("Ganador jugador 2");
+                    mensajeGanadorJug2();
                 }else{
                     if(c1.value == "X" && c2.value == "X" && c3.value == "X"){
-                        alert("Ganador jugador 1");
+                        mensajeGanadorJug1();
                     }else{
                         if(c1.value == "O" && c2.value == "O" && c3.value == "O"){
-                            alert("Ganador jugador 2");
+                            mensajeGanadorJug2();
                         }else{
                             if(a1.value == "X" && b1.value == "X" && c1.value == "X"){
-                                alert("Ganador jugador 1");
+                                mensajeGanadorJug1();
                             }else{
                                 if(a1.value == "O" && b1.value == "O" && c1.value == "O"){
-                                    alert("Ganador jugador 2");
+                                    mensajeGanadorJug2();
                                 }else{
                                     if(a2.value == "X" && b2.value == "X" && c2.value == "X"){
-                                        alert("Ganador jugador 1");
+                                        mensajeGanadorJug1();
                                     }else{
                                         if(a2.value == "O" && b2.value == "O" && c2.value == "O"){
-                                            alert("Ganador jugador 2");
+                                            mensajeGanadorJug2();
                                         }else{
                                             if(a3.value == "X" && b3.value == "X" && c3.value == "X"){
-                                                alert("Ganador jugador 1");
+                                                mensajeGanadorJug1();
                                             }else{
                                                 if(a1.value == "X" && b2.value == "X" && c3.value == "X"){
-                                                    alert("Ganador jugador 1");
+                                                    mensajeGanadorJug1();
                                                 }else{
                                                     if(a1.value == "O" && b2.value == "O" && c3.value == "O"){
-                                                        alert("Ganador jugador 2");
+                                                        mensajeGanadorJug2();
                                                     }else{
                                                         if(a3.value == "X" && b2.value == "X" && c1.value == "X"){
-                                                            alert("Ganador jugador 1");
+                                                            mensajeGanadorJug1();
                                                         }else{
                                                             if(a3.value == "O" && b2.value == "O" && c1.value == "O"){
-                                                                alert("Ganador jugador 2");
+                                                                mensajeGanadorJug2();
                                                             }
                                                         }
                                                     }
@@ -214,6 +216,21 @@ for(var i = 0; i < buttons.length; i++) {
     }
 }
 
-function mensajeGanador(){
+function mensajeGanadorJug1(){
+    var cartel1 = document.createElement("p");
+    var ganadorJug1 = document.createTextNode("El ganador es el jugador 1");
+    cartel1.appendChild(ganadorJug1);
+    var cartelContainerJug1 = document.getElementById("cartelContainer");
+    cartelContainerJug1.appendChild(cartel1);
+    cartel1.setAttribute("id","cartel1");
     
+}
+
+function mensajeGanadorJug2(){
+    var cartel2 = document.createElement("p");
+    var ganadorJug2 = document.createTextNode("El ganador es el jugador 2");
+    cartel2.appendChild(ganadorJug2);
+    var cartelContainerJug2 = document.getElementById("cartelContainer")
+    cartelContainerJug2.appendChild(cartel2);
+    cartel2.setAttribute("id","cartel2");
 }
