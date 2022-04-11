@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscripcion</title>
+</head>
+<body>
+        <div class="container-tabla">
+            <table class="tabla">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>IVA</th>
+                  </tr>
+                  <tr>
+                    <td><Input type="text" id="codigo" ></Input></td>
+                    <td><Input type="text" id="descripcion"></Input></td>
+                    <td><Input type="number" id="precio"></Input></td>
+                    <td><Input type="number" id="cantidad"></Input></td>
+                    <td><div>
+                        <input type="radio" name="ivaUnico" id="IVA1" value=10.5>10,5%
+                        <input type="radio" name="ivaUnico" id="IVA2" value=21 >21%
+                        </div></td>
+                        
+                    <td><input type="button" name="registrar" value="Registrar" onclick="agregarProducto()" ></td>
+                  </tr>
+            </table>
+        </div>
+        
+    
+    <table class="nuevaTabla" id="nvTabla">
+
+
+    </table>
+    <script src="app.js"></script>
+</body>
+</html>
