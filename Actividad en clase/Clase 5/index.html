@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Righteous&display=swap" rel="stylesheet">
     <title>Inscripcion</title>
 </head>
 <body>
         <div class="container-tabla">
             <table class="tabla">
-                <tr>
-                    <th>Codigo</th>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>IVA</th>
+                <tr class="titulosContainer">
+                    <th class="titulos">Codigo</th>
+                    <th class="titulos">Descripcion</th>
+                    <th class="titulos">Precio</th>
+                    <th class="titulos">Cantidad</th>
+                    <th class="titulos">IVA</th>
                   </tr>
-                  <tr>
-                    <td><Input type="text" id="codigo" ></Input></td>
-                    <td><Input type="text" id="descripcion"></Input></td>
-                    <td><Input type="number" id="precio"></Input></td>
-                    <td><Input type="number" id="cantidad"></Input></td>
-                    <td><div>
+                  <tr class="campos-container">
+                    
+                    <td class="campos"><input type="text" id="codigo" ></input></td>
+                    <td class="campos"><input type="text" id="descripcion"></input></td>
+                    <td class="campos"><input type="number" id="precio"></input></td>
+                    <td class="campos"><input type="number" id="cantidad"></Input></td>
+                    <td class="campos"><div>
                         <input type="radio" name="ivaUnico" id="IVA1" value=10.5>10,5%
                         <input type="radio" name="ivaUnico" id="IVA2" value=21 >21%
                         </div></td>

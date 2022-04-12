@@ -43,6 +43,34 @@ function agregarProducto(){
     
     Lista.push(prod);
     
+    generarTabla();
+
+}
+
+
+const borrar = ()=>{
+    Lista.forEach(produ=>{
+        if(produ.codigo){
+            Lista.splice(Lista.indexOf(produ),1);
+        }
+    })
+    generarTabla();
+}
+
+const editarProducto = ()=>{
+    Lista.forEach(produ=>{
+        if(produ.codigo == codigo.value){
+            produ.descripcion = descripcion.value;
+            produ.precio = precio.value;
+            produ.cantidad = cantidad.value;
+            produ.IVA = IVA.value;
+            produ.subtotal = (produ.precio * produ.cantidad) * (produ.IVA);
+        }
+    })
+    generarTabla();
+}
+
+const generarTabla = ()=>{
     var tabla = document.getElementById("nvTabla");
 
     let header = `<tr>
@@ -68,37 +96,11 @@ function agregarProducto(){
                 <td>${cantidad}</td>
                 <td>${IVA}</td>
                 <td>${subtotal}</td>
-                <td><input type="button" id="btnEditar" value="Editar" onclick="agregarProducto()">
+                <td><input type="button" id="btnEditar" value="Editar" onclick="editarProducto()">
                 <input type="button" id="btnBorrar" value="Borrar" onclick="borrar()"></td>
-                
             <tr>`
             
     })
 
     tabla.innerHTML = header + body;
-
-    console.log(btnEditar.getAttribute("onclick"));
-    console.log(btnBorrar.getAttribute("onclick"));
-}
-
-
-const borrar = ()=>{
-    Lista.forEach(produ=>{
-        if(produ.codigo){
-            Lista.splice(Lista.indexOf(produ),1);
-        }
-    })
-}
-
-const editarProducto = ()=>{
-    Lista.forEach(produ=>{
-        if(produ.codigo == codigo.value){
-            produ.codigo = producto[0].value;
-            produ.descripcion = producto[1].value;
-            produ.precio = producto[2].value;
-            produ.cantidad = producto[3].value;
-            produ.IVA = producto[4].value;
-            produ.subtotal = (produ.precio * produ.cantidad) * (produ.IVA);
-        }
-    })
 }
