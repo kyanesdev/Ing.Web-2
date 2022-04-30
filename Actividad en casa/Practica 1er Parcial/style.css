@@ -1,0 +1,28 @@
+.ingreso{
+    background-color: #82E0AA;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+    width: 40%;
+    height: 40%;
+    transform: translate(70%, 0%);
+}
+
+.registro{
+    background-color: #F5DEB3;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 0px;
+    width: 40%;
+    height: 40%;
+    transform: translate(70%, 10%);
+}
+
+#submit2{
+    width: 50%;
+    height: 50%;
+}
+
+.dropdown{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+
+    <!--Linkers-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="ingreso">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Ingreso de usuarios</h1>
+                </div>
+            </div>
+
+            <form action="">
+                <div class="row">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" placeholder="Usuario" id="usuarioLogin">
+                    </div>
+                    <div class="input-group mb-4">
+                        <div class="input-group mb-4">
+                            <input type="email" class="form-control" placeholder="Email" id="emailLogin">
+                        </div>
+                        <input type="password" class="form-control" placeholder="Contraseña" id="passwordLogin">
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input class="btn btn-primary" type="submit" id="enviarLogin" value="Enviar" onclick="">
+                            <button class="btn btn-outline-primary">Ver Formulario de Registro</button>
+                        </div>
+                    </div>
+                </div>
+            </form>   
+        </div>
+        
+    
+        <div class="registro">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Registro de un nuevo usuario</h1>
+                </div>
+            </div>
+
+            <form action="">
+                <div class="row">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" placeholder="Usuario" id="usuarioRegister">
+                    </div>
+                    <div class="input-group mb-4">
+                        <div class="input-group mb-4">
+                            <input type="email" class="form-control" placeholder="Email" id="emailRegister">
+                        </div>
+                        <input type="password" class="form-control" placeholder="Contraseña" id="passwordRegister">
+                    </div>
+        
+                    <div class="dropdown">
+                        <select id = "myList" onchange = "favTutorial()" >  
+                            <option> ---Elige un perfil--- </option>  
+                            <option> Estandar </option>  
+                            <option> Avanzado </option>  
+                            <option> Administrador </option>
+                            </select>  
+                            <p> El perfil seleccionado es:   
+                            <input type = "text" id = "perfil" size = "20" </p>  
+                      </div>
+        
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input class="btn btn-primary" type="submit" id="enviarRegister" value="Enviar" onclick="registro()">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+                <script src="app.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous"></script>
+</body>
+
+</html>
