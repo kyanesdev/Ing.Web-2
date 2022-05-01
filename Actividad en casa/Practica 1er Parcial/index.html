@@ -39,8 +39,8 @@
         
                     <div class="row">
                         <div class="col-md-12">
-                            <input class="btn btn-primary" type="submit" id="enviarLogin" value="Enviar" onclick="">
-                            <button class="btn btn-outline-primary">Ver Formulario de Registro</button>
+                            <input class="btn btn-primary" type="submit" id="enviarLogin" value="Enviar" onclick="login()">
+                            <input class="btn btn-primary" type="button" id="enviarLogin" value="Registro" onclick="desplegarFormularioRegistro()">
                         </div>
                     </div>
                 </div>
@@ -48,14 +48,14 @@
         </div>
         
     
-        <div class="registro">
+        <div class="registro" id="opcionRegistro">
             <div class="row">
                 <div class="col-md-12">
                     <h1>Registro de un nuevo usuario</h1>
                 </div>
             </div>
 
-            <form action="">
+            <form action="" name="formularioRegistro">
                 <div class="row">
                     <div class="input-group mb-4">
                         <input type="text" class="form-control" placeholder="Usuario" id="usuarioRegister">
@@ -74,8 +74,8 @@
                             <option> Avanzado </option>  
                             <option> Administrador </option>
                             </select>  
-                            <p> El perfil seleccionado es:   
-                            <input type = "text" id = "perfil" size = "20" </p>  
+                            <p> El perfil seleccionado es:
+                                <input type="text" class="form-control" id = "perfil" size = "20"></p>  
                       </div>
         
                     <div class="row">
