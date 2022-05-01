@@ -26,3 +26,63 @@
 .dropdown{
     margin-bottom: 20px;
 }
+
+.class{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tabla{
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+    transform: translate(52vh, 7vh);
+    width: 39%;
+    height: 35%;
+    background-color: #F5DEB3;
+    border-radius: 5px;
+}
+
+
+td{
+    margin-left: 2vh;
+    width: 70%;
+    padding-left: 8vh;
+}
+
+#botonEditar{
+    margin-top: 1vh;
+    margin-left: -6vh;
+}
+
+#botonEliminar{
+    margin-top: 2vh;
+    margin-left: -7vh;
+    transform: translate(-10%, -18%);
+}
+
+#usuarioTabla{
+    padding-right: -10vh;
+    left: -10vh;
+}
+
+#thUsuario{
+    text-align: center;
+    transform: translate(-15%, 0%);
+}
+
+#h1Tabla{
+    text-align: center;
+}
+
+#emailTabla{
+    transform: translate(-15%, 0%);
+}
+
+#perfilTabla{
+    transform: translate(-5%, 0%);
+}
+
+#mostrarTabla{
+    margin-top: 1vh;
+}
