@@ -187,7 +187,7 @@ const buscarInformacion = ()=>{
         
         
     }
-    console.log(perfil.value)
+
 }
 
 let ocultarFormularioRegistro = document.getElementById("opcionRegistro").style.display = "none";
@@ -195,21 +195,50 @@ const desplegarFormularioRegistro = ()=>{
     document.getElementById("opcionRegistro").style.display = "block";
 }
 
-const eliminarUsuario = ()=>{
+const eliminarUsuario = (id)=>{
     
-    let ide;
+    //1) Recorro hasta lo que yo quiero borrar
+    //2) Borro la linea que quiero borrar
+    //3) Luego sigo recorriendo el local localStorage
+    //4) Por cada elemento recorrido, voy tomar el objeto del localStorage , eliminar el objeto del localStorage, editarlo (cambiarle las ids) 
+    //y despues cargarlo de nuevo
 
-    if(window.localStorage.getItem("id")){
-        ide = parseInt(window.localStorage.getItem("id"));
-    }
-    for(let i = 1; i < ide; i++){
-        window.localStorage.removeItem("NewUser"+ide);
-    }
+    let ide = 1;
+    let lista = [];
     
+    ide = parseInt(window.localStorage.getItem("id"));
+    
+    
+    for(let i = 1; i <= ide-1; i++){
+        
+        let persona = JSON.parse(window.localStorage.getItem("NewUser"+i));
+        lista.push(persona);
+        
+
+    }
+    //borrar un elemento de la lista por id
+    window.localStorage.clear();
+    console.log(lista);
+    lista.splice(id-1,1);
+    console.log(lista);
+
+    window.localStorage.setItem("id",ide-1);
+
+    for(let i = 1; i < ide-1; i++){
+        
+        
+        window.localStorage.setItem("NewUser"+i, JSON.stringify(lista[i-1]));
+        
+
+    }
+    //window.localStorage.setItem("id",ide-1);
+    let tabla = document.getElementById("tablaUsuarios");
+    tabla.remove();
+    tabla();
 }
 
 const generarTabla = ()=>{
-    eliminarUsuario();
+    
     let ide;
     if(window.localStorage.getItem("id")){
         ide = parseInt(window.localStorage.getItem("id"));
@@ -233,7 +262,7 @@ const generarTabla = ()=>{
         btnEliminar.setAttribute("class","btn btn-danger");
         btnEliminar.setAttribute("id","botonEliminar");
         
-        btnEliminar.setAttribute("onclick","eliminarUsuario()");
+        btnEliminar.setAttribute("onclick",`eliminarUsuario(${i})`);
 
         tdUsuario.innerHTML = persona.usuario;
         tdUsuario.setAttribute("id","usuarioTabla");
